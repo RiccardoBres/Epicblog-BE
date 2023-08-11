@@ -1,0 +1,80 @@
+GET http://localhost:9090/posts
+
+####
+
+//trova il commento di un post
+GET http://localhost:9090/posts/64bd0cd01b1416a637e454d0/comments
+
+//trova il commento specifico di un post specifico:
+####
+GET http://localhost:9090/post/64bd0cd01b1416a637e454d0/comment/64bd0c8d1b1416a637e454c3
+
+####
+POST http://localhost:9090/posts/64beee9da55a35717a943d39/comment HTTP/1.1
+Content-Type: application/json
+
+{
+    "content": "Ottimi vini"
+}
+
+//modifica il commento di un post
+####
+PATCH http://localhost:9090/posts/64bd0cd01b1416a637e454d0/comment/64bd0c8d1b1416a637e454c3
+Content-Type: application/json
+
+{
+    "content": "carino"
+}
+
+//Elimina il commento di uno specifico post
+####
+DELETE http://localhost:9090/posts/64bd0cd01b1416a637e454d0/comment/64bd0c8d1b1416a637e454c3 
+
+####
+POST http://localhost:9090/posts HTTP/1.1
+Content-Type: application/json
+
+ {
+    "category": "Bevande",
+    "title": "Vino che passione",
+    "cover": "https://tse2.mm.bing.net/th?id=OIP.5RTPe92Tqzs37IAfhdOKkwHaEf&pid=Api&P=0&h=180",
+    "readtime": {
+        "value": 10,
+        "unit": "minutes"
+    },
+    "author":"64becaf0ae1a24df95813c77",
+    "content": "Ecco l’elenco completo dei vini d’Italia suddiviso per regione, tipologia e denominazione: Vini per regione: Valle d’Aosta; Piemonte; Lombardia; Trentino; Alto Adige; Friuli Venezia Giulia; Veneto;",
+    "comment": []
+ }
+
+
+####
+PATCH  http://localhost:9090/posts/64b3ee727abb7cd147ace914 HTTP/1.1
+Content-Type: application/json
+
+ {
+     "category": "text",
+    "title": "Ciccio",
+    "cover": "https://images.",
+    "readtime": {
+        "value": 10,
+        "unit": "minutes"
+    },
+    "author":{
+        "name": "Robero",
+        "avatar": "data:image/"
+    },
+    "content": "Lorem ipsum suiiii"
+ }
+
+####
+GET http://localhost:9090/posts/create/title?postTitle=La
+
+
+####
+GET http://localhost:9090/posts/64bea59cbc5f8834b3d5dfa8
+
+
+####
+
+DELETE http://localhost:9090/posts/64b3ee427abb7cd147ace912 

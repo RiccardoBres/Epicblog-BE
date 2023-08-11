@@ -1,0 +1,29 @@
+GET http://localhost:9090/authors
+
+####
+
+POST http://localhost:9090/authors/create HTTP/1.1
+Content-Type: application/json
+
+{
+"nome": "Davide",
+"cognome": "Franceschini",
+"password": "Sulltre",
+"email": "rambozzinoccio@blabla.com",
+"data":"26-12-15",
+"avatar":"no Avatar"
+}
+
+
+####
+
+GET http://localhost:9090/authors/64aeda5d383cb7e5c1872a9d
+
+####
+PATCH http://localhost:9090/authors/64becaf0ae1a24df95813c77 HTTP/1.1
+Content-Type: application/json
+
+{
+
+"avatar":"https://biografieonline.it/img/bio/b/Bruno_Vespa.jpg"
+}

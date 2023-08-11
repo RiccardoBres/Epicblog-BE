@@ -1,0 +1,4 @@
+riccardobresolin63
+cbZsYlrUvOu6az4p
+
+mongodb+srv://riccardobresolin63:cbZsYlrUvOu6az4p@bresolin-epiblog.funmbmc.mongodb.net/
